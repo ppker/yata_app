@@ -407,8 +407,11 @@ def configure_translations(app):
             and current_user.is_authenticated
             and current_user.language
         ):
+            print('cccccc')
+            print(current_user.language)
             return current_user.language
         # otherwise we will just fallback to the default language
+        # return 'zh'
         return flaskbb_config["DEFAULT_LANGUAGE"]
 
 
