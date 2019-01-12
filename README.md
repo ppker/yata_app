@@ -27,6 +27,12 @@ avoid the registration process.
 
 The official forums where all the fun happens can be reached via [forums.flaskbb.org](https://forums.flaskbb.org).
 
+## bug
+---
+```angular2html
+celery bug
+async to asynchronous
+```
 
 ## Quickstart
 
