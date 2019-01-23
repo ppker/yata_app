@@ -24,6 +24,41 @@
         <link rel="stylesheet" href="{{ url_for('static', filename='css/pygments.css') }}">
         <!-- bootstrap & aurora theme -->
         <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+        <style type="text/css">
+            .clearfix:after{
+                content:".";
+                display:block;
+                height:0;
+                clear:both;
+                visibility:hidden;
+            }
+            .logo-img {
+                float: left;
+            }
+            .flaskbb-header {
+                padding: 2px 1px;
+            }
+            div.flaskbb-header .flaskbb-meta {
+                position: relative;
+                left: 15px;
+                top: 38px;
+            }
+            body {
+                background: white url("{{ url_for('static', filename='img/paper.png') }}") repeat center top;
+            }
+            div.flaskbb-header {
+                background: white url("{{ url_for('static', filename='img/banner.jpeg') }}") no-repeat right center;
+            }
+            .flaskbb-header .flaskbb-meta .flaskbb-title {
+                color: #5bc0de;
+            }
+            .flaskbb-header .flaskbb-meta .flaskbb-subtitle {
+                color: #12646d;
+            }
+            .flaskbb-layout {
+                padding-top: 0;
+            }
+        </style>
         <!-- lato font -->
         <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
         <!-- emoji -->
@@ -47,8 +82,11 @@
 
                 <!-- forum header - place for the project title and subtitle -->
                 {% block header %}
-                <div class="flaskbb-header">
-                    <div class="flaskbb-meta">
+                <div class="flaskbb-header clearfix">
+                    <div class="logo-img">
+                        <img class="logo-image" src="{{ url_for('static', filename='img/logo.jpeg') }}" alt="log image">
+                    </div>
+                    <div class="flaskbb-meta logo-img">
                         <div class="flaskbb-title">{{ flaskbb_config["PROJECT_TITLE"] }}</div>
                         <div class="flaskbb-subtitle">{{ flaskbb_config["PROJECT_SUBTITLE"] }}</div>
                     </div>
