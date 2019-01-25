@@ -25,13 +25,13 @@
         <!-- bootstrap & aurora theme -->
         <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
         <style type="text/css">
-            .clearfix:after{
+            {#.clearfix:after{
                 content:".";
                 display:block;
                 height:0;
                 clear:both;
                 visibility:hidden;
-            }
+            }#}
             .logo-img {
                 float: left;
             }
@@ -50,13 +50,22 @@
                 background: white url("{{ url_for('static', filename='img/banner.jpeg') }}") no-repeat right center;
             }
             .flaskbb-header .flaskbb-meta .flaskbb-title {
-                color: #5bc0de;
+                color: #1c6b82;
             }
             .flaskbb-header .flaskbb-meta .flaskbb-subtitle {
                 color: #12646d;
             }
             .flaskbb-layout {
                 padding-top: 0;
+            }
+            .flaskbb-header {
+                padding: 0;
+            }
+            .panel-body .post-box {
+                background: #c3efef;
+            }
+            .navbar-default .navbar-nav>li>a:hover, .navbar-default .navbar-nav>li>a:focus {
+                background-color: #5dcaad;
             }
         </style>
         <!-- lato font -->
